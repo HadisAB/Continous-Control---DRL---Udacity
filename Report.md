@@ -25,7 +25,7 @@ The used environment for Windows 64 : [one agent Reacher Environment](https://s3
 I have solved the project by Deep Deterministic Policy Gradients (DDPG) algorithm. The main used reference to solve this project is the udacity [DDPG exercises](https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum). <br/>
 
 
-You can find the solution by refering to [training code](https://github.com/HadisAB/Navigation-DRL-Udacity/tree/master/Training%20code) and using below clarification. <br/>
+You can find the solution by refering to [Training code](https://github.com/HadisAB/Continous-Control---DRL---Udacity/tree/master/Training%20Code) and using below clarification. <br/>
 
 * I have trained the agent for some episodes and for some maximum number of time-steps in each episode.
 * The training loop is composed of acting (selects the action) and learning (updates the weights to maximize value estimation) steps. 
