@@ -27,9 +27,9 @@ I have solved the project by Deep Deterministic Policy Gradients (DDPG) algorith
 
 You can find the solution by refering to [training code](https://github.com/HadisAB/Navigation-DRL-Udacity/tree/master/Training%20code) and using below clarification. <br/>
 
-> I have trained the agent for some episodes and for some maximum number of time-steps in each episode.
-> The training loop is composed of acting (selects the action) and learning (updates the weights to maximize value estimation) steps. 
-> Then update the target Actor and Critic weights by the current weights of the local Actor and Critic networks.
+* I have trained the agent for some episodes and for some maximum number of time-steps in each episode.
+* The training loop is composed of acting (selects the action) and learning (updates the weights to maximize value estimation) steps. 
+* Then update the target Actor and Critic weights by the current weights of the local Actor and Critic networks.
 
 
 **Continous Control.py**: This is the main script which shows the intersections between the environment and agent by using following functions. <br/>
@@ -40,20 +40,15 @@ You can find the solution by refering to [training code](https://github.com/Hadi
 **ddpg_agent.py** : This is a class of agents activites which make agent be trained. <br/>
 
 
-
-In this part, the agent will take samples in RelayBuffer and also will be trained for each 4 steps. Consider below used functions for more details:<br/>
-
-
-
 **model_weights.pth**: This stores the trained weights. 
 
 ### used parameters
 BUFFER_SIZE = int(1e5)   &nbsp; &nbsp; replay buffer size<br/>
-BATCH_SIZE = 64         &nbsp; &nbsp; minibatch size<br/>
+BATCH_SIZE = 128         &nbsp; &nbsp; minibatch size<br/>
 GAMMA = 0.99            &nbsp; &nbsp; discount factor<br/>
 TAU = 1e-3              &nbsp; &nbsp; for soft update of target parameters<br/>
-LR = 5e-4               &nbsp; &nbsp; learning rate <br/>
-UPDATE_EVERY = 4        &nbsp; &nbsp; how often to update the network
+LR_ACTOR = 2e-4         &nbsp; &nbsp; learning rate for Actor<br/>
+LR_CRITIC = 2e-4        &nbsp; &nbsp; learning rate for Critic<br/>
 
 ### Result
 
@@ -65,4 +60,4 @@ UPDATE_EVERY = 4        &nbsp; &nbsp; how often to update the network
 
 ### Ideas for future work
 
-As discussed in the Udacity Course, a further evolution to this project would be to train the agent directly from the environment's observed raw pixels instead of using the environment's internal states (37 dimensions).
+As discussed in the Udacity Course, a further evolution to this project would be expanding the agents to solve a multiagent network.
