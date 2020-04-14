@@ -3,23 +3,17 @@ P2-Continous Control- Udacity Deep Reinforcement Learning Nanodegree Program
 
 
 ## Project details
-For this project, I will train an robotic arm to reach target locations.
+For this project, I will train an robotic arm to reach target locations in [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) environment. 
 
 <img src=https://github.com/HadisAB/Continous-Control---DRL---Udacity/blob/master/images/example_env.png />
 
 
 ### Goal
-In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.
+In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of the agent is to maintain its position at the target location for as many time steps as possible.
 
-The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
 
 ### States and actions
-The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around the agent's forward direction. Given this information, the agent has to learn how to best select actions. Four discrete actions are available, corresponding to:<br/>
-
-0 - move forward.<br/>
-1 - move backward.<br/>
-2 - turn left.<br/>
-3 - turn right.
+The states consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
 
 ## Getting Started
 
@@ -30,7 +24,7 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 3. Open anaconda navigator, select drland in the anaconda environments, install and launch spyder. I have used spyder to run my codes. You may use another interface. 
 4. I have used Unity's rich environments to train and design the algorithms.<br/>
 Download the used environment for Windows 64 :
-[Banan Envoronment](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)<br/>
+[1 agent Reacher Envoronment](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)<br/>
 5. Install [unity ml-agents](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md), [numpy](https://numpy.org/) and [pytorch](https://pytorch.org/) through shown links.
 6. Install matplotlib.pyplot by using below command in 'anaconda prompt':<br/>
 > pip install matplotlib.pyplot
