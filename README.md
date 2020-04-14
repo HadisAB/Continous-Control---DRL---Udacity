@@ -24,7 +24,7 @@ The states consists of 33 variables corresponding to position, rotation, velocit
 3. Open anaconda navigator, select drland in the anaconda environments, install and launch spyder. I have used spyder to run my codes. You may use another interface. 
 4. I have used Unity's rich environments to train and design the algorithms.<br/>
 Download the used environment for Windows 64 :
-[1 agent Reacher Envoronment](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)<br/>
+[1 agent Reacher Environment](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)<br/>
 5. Install [unity ml-agents](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md), [numpy](https://numpy.org/) and [pytorch](https://pytorch.org/) through shown links.
 6. Install matplotlib.pyplot by using below command in 'anaconda prompt':<br/>
 > pip install matplotlib.pyplot
