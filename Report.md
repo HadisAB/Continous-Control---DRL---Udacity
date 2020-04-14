@@ -40,7 +40,8 @@ You can find the solution by refering to [Training code](https://github.com/Hadi
 **ddpg_agent.py** : This is a class of agents activites which make agent be trained. <br/>
 
 
-**model_weights.pth**: This stores the trained weights. 
+**checkpoint_actor.pth**: This stores the trained weights of Actor. 
+**checkpoint_critic.pth**: This stores the trained weights. 
 
 ### used parameters
 BUFFER_SIZE = int(1e5)   &nbsp; &nbsp; replay buffer size<br/>
@@ -52,10 +53,10 @@ LR_CRITIC = 2e-4        &nbsp; &nbsp; learning rate for Critic<br/>
 
 ### Result
 
-<img src="https://github.com/HadisAB/Navigation-DRL-Udacity/blob/master/images/scores.png" />
+<img src="https://github.com/HadisAB/Continous-Control---DRL---Udacity/blob/master/images/scores.png" />
 
 
-<img src="https://github.com/HadisAB/Navigation-DRL-Udacity/blob/master/images/scoretrend.png" />
+<img src="https://github.com/HadisAB/Continous-Control---DRL---Udacity/blob/master/images/scoretrand.png" />
 
 
 ### Ideas for future work
