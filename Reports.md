@@ -4,36 +4,35 @@ P2-Continous Control <br/>
 
 
 ### Description
-For this project, I will train an agent to navigate (and collect bananas!) in a large, square world.<br/>
-[Environment view](https://github.com/HadisAB/Navigation-DRL-Udacity/blob/master/images/videoexample.mp4)
+For this project, I will train an robotic arm to reach target locations in [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) environment. 
+
+<img src=https://github.com/HadisAB/Continous-Control---DRL---Udacity/blob/master/images/example_env.png />
 
 
 
 ### Goal
-A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana. Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.<br/>
-The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
+In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of the agent is to maintain its position at the target location for as many time steps as possible.
+
 
 ### States and actions
-The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around the agent's forward direction. <br/> Given this information, the agent has to learn how to best select actions. Four discrete actions are available, corresponding to:<br/>
-
-0 - move forward.<br/>
-1 - move backward.<br/>
-2 - turn left.<br/>
-3 - turn right.
+The states consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
 
 ### Environment
-The used environment for Windows 64 :
-[Banan Envoronment](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
+The used environment for Windows 64 : [one agent Reacher Environment](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)<br/>
 
 
 ### Solution
-I have solved the project by Deep Q-Networks and also considering the 'Experience Replay' and 'Fixed Q Targets' to improvement the training. You can find the solution by refering to [training code](https://github.com/HadisAB/Navigation-DRL-Udacity/tree/master/Training%20code) and using below clarification. <br/>
+I have solved the project by Deep Deterministic Policy Gradients (DDPG) algorithm. The main used reference to solve this project is the udacity [DDPG exercises](https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum). <br/>
 
-**Navigation.py**: This is the main script which shows the intersections between the environment and agent by using following functions. <br/>
 
-**model.py** : This is a neural network consists of two hidden layers with 64 nodes. I have also used Relu function as activation function.<br/>
+You can find the solution by refering to [training code](https://github.com/HadisAB/Navigation-DRL-Udacity/tree/master/Training%20code) and using below clarification. <br/>
 
-**dqn_agent.py** : This is a class of agents activites which make agent be trained. <br/>
+**Continous Control.py**: This is the main script which shows the intersections between the environment and agent by using following functions. <br/>
+
+**model.py** : This is neural model for Actor and Critic network. Each consisting two hidden layers with 128 hidden nodes. In these networks the actor does the policy approximation, and the critic does the value estimation. The activation functions in Actor and Critic are Relu/tanh and Relu/Linear, respectively.
+
+
+**ddpg_agent.py** : This is a class of agents activites which make agent be trained. <br/>
 In this part, the agent will take samples in RelayBuffer and also will be trained for each 4 steps. Consider below used functions for more details:<br/>
 
 **Agent class**: <br/>
