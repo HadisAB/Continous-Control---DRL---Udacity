@@ -40,7 +40,8 @@ You can find the solution by refering to [Training code](https://github.com/Hadi
 **ddpg_agent.py** : This is a class of agents activites which make agent be trained. <br/>
 
 
-**checkpoint_actor.pth**: This stores the trained weights of Actor. 
+**checkpoint_actor.pth**: This stores the trained weights of Actor. <br/>
+
 **checkpoint_critic.pth**: This stores the trained weights. 
 
 ### used parameters
