@@ -61,5 +61,13 @@ LR_CRITIC = 2e-4        &nbsp; &nbsp; learning rate for Critic<br/>
 
 
 ### Ideas for future work
+Here are some ideas for future work:
 
-As discussed in the Udacity Course, a further evolution to this project would be expanding the agents to solve a multiagent network.
+[Prioritized Experience Replay](https://arxiv.org/abs/1511.05952): 
+> The idea behind using these technique for sampling from the replay buffer is that not all experiences are equal, some are more important than others in terms of reward, so naturally the agent should at least prioritize between the different experiences.
+
+
+[Asynchronous Actor Critic](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-8-asynchronous-actor-critic-agents-a3c-c88f72a5e9f2): The idea is to have a global network and multiple agents who all interact with the environment separately and send their gradients to the global network for optimization in an asynchronous way.
+
+
+
