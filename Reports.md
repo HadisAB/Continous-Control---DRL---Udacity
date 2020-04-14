@@ -27,24 +27,23 @@ I have solved the project by Deep Deterministic Policy Gradients (DDPG) algorith
 
 You can find the solution by refering to [training code](https://github.com/HadisAB/Navigation-DRL-Udacity/tree/master/Training%20code) and using below clarification. <br/>
 
+> I have trained the agent for some episodes and for some maximum number of time-steps in each episode.
+> The training loop is composed of acting (selects the action) and learning (updates the weights to maximize value estimation) steps. 
+> Then update the target Actor and Critic weights by the current weights of the local Actor and Critic networks.
+
+
 **Continous Control.py**: This is the main script which shows the intersections between the environment and agent by using following functions. <br/>
 
 **model.py** : This is neural model for Actor and Critic network. Each consisting two hidden layers with 128 hidden nodes. In these networks the actor does the policy approximation, and the critic does the value estimation. The activation functions in Actor and Critic are Relu/tanh and Relu/Linear, respectively.
 
 
 **ddpg_agent.py** : This is a class of agents activites which make agent be trained. <br/>
+
+
+
 In this part, the agent will take samples in RelayBuffer and also will be trained for each 4 steps. Consider below used functions for more details:<br/>
 
-**Agent class**: <br/>
-> * step() : It stores a step taken by the agent in the Replay Buffer. Then the agent will be learnt Every 4 steps.
-> * act(): This returns actions for the given state based on an Epsilon-greedy.
-> * learn(): This update the Neural Network value parameters.
-> * soft_update(): It updates the value from the target Neural Network from the local network weights (That's part of the Fixed Q Targets technique).
 
-**ReplayBuffer class**:<br/>
-It implements a fixed-size buffer to store experience tuples (state, action, reward, next_state, done)
-> * add(): It appends the samples to the memory
-> * sample(): It randomly samples a batch of experience steps in the memory.
 
 **model_weights.pth**: This stores the trained weights. 
 
