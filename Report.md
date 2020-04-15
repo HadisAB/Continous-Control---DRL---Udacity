@@ -57,7 +57,7 @@ LR_CRITIC = 2e-4        &nbsp; &nbsp; learning rate for Critic<br/>
 <img src="https://github.com/HadisAB/Continous-Control---DRL---Udacity/blob/master/images/scores.png" />
 
 
-<img src="https://github.com/HadisAB/Continous-Control---DRL---Udacity/blob/master/images/scoretrand.png" />
+<img src="https://github.com/HadisAB/Continous-Control---DRL---Udacity/blob/master/images/scoretrend.png" />
 
 
 ### Ideas for future work
